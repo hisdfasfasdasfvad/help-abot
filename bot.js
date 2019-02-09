@@ -284,7 +284,7 @@ Discord.RichEmbed()
 .addField('المرسل :sagittarius: ', message.author.username)
 .addField('الرساله :envelope_with_arrow: ', args)
 .setThumbnail(message.author.avatarURL)
-.setFooter(copy, client.user.avatarURL);
+.setFooter("", client.user.avatarURL);
 m.send({ embed: bc })
 msg.delete();
 })
