@@ -44,7 +44,7 @@ client.on('message',async message => {
   if (message.content === prefix + "help") {
   message.channel.send(" تــــم ارســالك في الخــاص" )      
        const EpicEmbed = new Discord.RichEmbed() 
-         .setColor("random")
+         .setColor("RANDOM")
          .setThumbnail(message.author.avatarURL)
          .setDescription("***═════════ஜ۩  أوامر الاعضاء و الاداره  ۩ஜ═══════════***")
          .addField("**『``#support`` : **","**لإخذ رابط السببورت』**")
@@ -250,7 +250,7 @@ client.on('ready', () => {//new ready event
                      role.edit({color : "RANDOM"});
                  };
      });
- }, 1);//the rainbow time
+ }, 2500);//the rainbow time
 })
 
 //====================================================================
