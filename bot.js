@@ -44,7 +44,7 @@ client.on('message',async message => {
   if (message.content === prefix + "help") {
   message.channel.send(" تــــم ارســالك في الخــاص" )      
        const EpicEmbed = new Discord.RichEmbed() 
-         .setColor(random)
+         .setColor("random")
          .setThumbnail(message.author.avatarURL)
          .setDescription("***═════════ஜ۩  أوامر الاعضاء و الاداره  ۩ஜ═══════════***")
          .addField("**『``#support`` : **","**لإخذ رابط السببورت』**")
