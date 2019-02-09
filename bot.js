@@ -8,7 +8,7 @@ console.log("BOT ONLINE");
 const prefix = "#";
 const token = "NTQzNzg5NjIyNDI2MjA2MjEx.D0BrJQ.T2JO7ovWi0r3lbj-a8UisGQc5qk";
 const owner = "```"+"` ۰ !JĐ…King...For...family.★-#3326"+"```";
-const Coded = "```"+"`TGS_Super | Huler#2399`"+"```";
+const Coded = "```"+"||`TGS_Super | Huler`||#2399"+"```";
 
 //====================================================================
 client.on('ready', () => {
