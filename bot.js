@@ -112,7 +112,7 @@ User.send(`**:airplane: You are has been banned in ${message.guild.name} reason:
 
 //====================================================================
 //command = id
-client.on('message', message => {
+client.on('message',async message => {
     if (message.content.startsWith(prefix + 'id')) {
         if (message.author.bot) return
         if (!message.guild) return message.reply('**This Command Just In Servers**')
@@ -144,7 +144,7 @@ client.on('message', message => {
 //====================================================================
 //command = bot
 
-client.on('message', message => {
+client.on('message',async message => {
   if (message.content.startsWith(prefix+"bot")) {
   message.channel.send({
       embed: new Discord.RichEmbed()
@@ -169,7 +169,7 @@ client.on('message', message => {
 //====================================================================
 //command = discord.gg
 
-client.on('message', message => {
+client.on('message',async message => {
 if(message.content.includes('discord.gg')){
                                   if(!message.channel.guild) return message.reply('**لا تنشر بالخاص**');
 if (!message.member.hasPermissions(['ADMINISTRATOR'])){
@@ -224,7 +224,7 @@ message.guild.channels.find("name","logs").send({embed : banembed})
 //====================================================================
 //command = Rainbow
 
-client.on('message', message => {//new msg event
+client.on('message',async message => {//new msg event
 if(!message.channel.guild) return;
  if(message.content.startsWith(prefix + 'Rainbow')) {//to create the rainbow role
    let role = message.guild.roles.find('name', 'Rainbow Rank')
@@ -256,7 +256,7 @@ client.on('ready', () => {//new ready event
 //====================================================================
 //command = bc
 
-client.on('message', message => {
+client.on('message',async message => {
 if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
@@ -300,7 +300,7 @@ msg.delete();
 //====================================================================
 //command = server
 
-client.on('message', message => {
+client.on('message',async message => {
 if(message.content.startsWith(prefix +"server")){ // الامر
  if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply(`**هذه الخاصية للادارة فقط** :negative_squared_cross_mark: `)
 if(!message.channel.guild) return message.reply(' ');
@@ -325,7 +325,7 @@ message.channel.sendEmbed(embed)
 //====================================================================
 //command = clear
 
-client.on("message", message => {
+client.on("message",async message => {
 var args = message.content.substring(prefix.length).split(" ");
  if (message.content.startsWith(prefix+"clear")) {
    if(!message.channel.guild) return message.reply('**❌ اسف لكن هذا الامر للسيرفرات فقط **');         
@@ -348,7 +348,7 @@ footer: {
 //====================================================================
 //command = UnBan
 
-client.on('message' , message => {
+client.on('message' ,async message => {
 let user = message.mentions.users.first()|| client.users.get(message.content.split(' ')[1])
 if(message.content.startsWith(prefix + 'unban')) {
    if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('❌|**\`ADMINISTRATOR\`لا توجد لديك رتبة`**');
@@ -369,7 +369,7 @@ if(message.content.startsWith(prefix + 'unban')) {
 //====================================================================
 //command = Hide
 
-client.on('message', msg => {
+client.on('message',async msg => {
 if(msg.content === prefix + 'hide') {
  msg.guild.channels.forEach(c => {
    c.overwritePermissions(msg.guild.id, {
@@ -384,7 +384,7 @@ if(msg.content === prefix + 'hide') {
 //====================================================================
 //command = UnHide
 
-client.on('message', msg => {
+client.on('message',async msg => {
 if(msg.content === prefix + 'unhide') {
  msg.guild.channels.forEach(c => {
    c.overwritePermissions(msg.guild.id, {
@@ -399,7 +399,7 @@ if(msg.content === prefix + 'unhide') {
 //====================================================================
 //command = allbc
 
-client.on("message", message => {
+client.on("message",async message => {
 if(message.author.bot) return;
  if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
