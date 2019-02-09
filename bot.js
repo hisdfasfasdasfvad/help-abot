@@ -56,10 +56,7 @@ client.on('message',async message => {
          .addField("**『``#server`` : **","**لاظهار معلومات السيرفر』**")
          .addField("**『``#bc`` : **","**لارسال رساله لاعضاء السيرفر』**")
          .addField("**『``#Rainbow`` : **","**لصنع رتبه رينبو』**")
-         .addField("**『``#drole`` : **","**لمسح الرتب كلها』**")
          .addField("**『``#kick`` : **","**لطرد شخص』**")
-         .addField("**『``#cl-room`` : **","**لتسكير الروم』**")
-         .addField("**『``#op-room`` : **","**لفتح الروم』**")
          .addField("**『``#server`` : **","**لاظهار معلومات السيرفر』**")
          .addField("**『``#id`` : **","**لاظهار معلوماتك』**")
          .addField("**『``#bot`` : **","**لظهار معلومات البوت』**")
@@ -183,35 +180,6 @@ return message.reply(`** انت لا يمكنك ان تنشر سيرفرات ب�
 });
 
 //====================================================================
-//command = closeroom / openroom
-
-client.on('message', message => {
- if(message.content === prefix + "cl-room") {
-                     if(!message.channel.guild) return message.reply('** This command only for servers**');
-
-if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' **__ليس لديك صلاحيات__**');
-        message.channel.overwritePermissions(message.guild.id, {
-      SEND_MESSAGES: false
-
-        }).then(() => {
-            message.reply("**__تم تقفيل الشات__ :white_check_mark: **")
-        });
-          }
-if(message.content === prefix + "op-room") {
-                  if(!message.channel.guild) return message.reply('** This command only for servers**');
-
-if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**__ليس لديك صلاحيات__**');
-        message.channel.overwritePermissions(message.guild.id, {
-      SEND_MESSAGES: true
-
-        }).then(() => {
-            message.reply("**__تم فتح الشات__:white_check_mark:**")
-        });
-}
- 
-});
-
-//====================================================================
 //command = kick
 
 client.on('message',async message => {
@@ -251,25 +219,7 @@ message.guild.channels.find("name","logs").send({embed : banembed})
 });
 
 
-//====================================================================
-//command = delroles
 
-client.on("message", message =>{
- if(!message.guild.member(message.author).hasPermission("MANGE_ROLES")) return message.reply("You Don't Have MANGE_ROLES Permission")
-  var command = message.content.split(" ")[0];
-   command = command.slice(prefix.length);
-  
-    if(command == "droles"){
-        var user= message.mentions.users.first();
-        if(!user){
-            user = message.author;
-        }
-     message.guild.member(user).removeRoles(message.guild.member(user).roles)
-      .then(console.log)
-       .catch(console.error);
-    message.channel.send("Done !!");
-    }
- });
 
 //====================================================================
 //command = Rainbow
