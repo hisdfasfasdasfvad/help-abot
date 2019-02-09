@@ -177,7 +177,7 @@ if(message.content.includes('discord.gg')){
                                   if(!message.channel.guild) return message.reply('**لا تنشر بالخاص**');
 if (!message.member.hasPermissions(['ADMINISTRATOR'])){
 message.delete()
-return message.reply(** انت لا يمكنك ان تنشر سيرفرات بهاذا السيرفر فقط الاداره يمكنها ان اتنشر **`)
+return message.reply(`** انت لا يمكنك ان تنشر سيرفرات بهاذا السيرفر فقط الاداره يمكنها ان اتنشر **`)
 }
 }
 });
