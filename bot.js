@@ -60,7 +60,7 @@ client.on('message',async message => {
          .addField("**『``#server`` : **","**لاظهار معلومات السيرفر』**")
          .addField("**『``#id`` : **","**لاظهار معلوماتك』**")
          .addField("**『``#bot`` : **","**لظهار معلومات البوت』**")
-         .addField("**『``#bot`` : **","**لاخذ رابط لانفيت البوت』**")
+         .addField("**『``#invite`` : **","**لاخذ رابط لانفيت البوت』**")
          .setDescription("***═════════ஜ۩  أوامر الاعضاء و الاداره  ۩ஜ═══════════***")
          .addField("Owner : ",owner)
          .addField("Coded By : ",Coded)
