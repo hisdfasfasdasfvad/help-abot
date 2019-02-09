@@ -60,10 +60,41 @@ client.on('message',async message => {
          .addField("**『``#server`` : **","**لاظهار معلومات السيرفر』**")
          .addField("**『``#id`` : **","**لاظهار معلوماتك』**")
          .addField("**『``#bot`` : **","**لظهار معلومات البوت』**")
+         .addField("**『``#bot`` : **","**لاخذ رابط لانفيت البوت』**")
          .setDescription("***═════════ஜ۩  أوامر الاعضاء و الاداره  ۩ஜ═══════════***")
          .addField("Owner : ",owner)
          .addField("Coded By : ",Coded)
    message.author.sendEmbed(EpicEmbed)
+ }
+});
+
+//====================================================================
+//command = invite
+client.on('message' , message => {
+  if (message.content === prefix + "invite") {
+      if(!message.channel.guild) return message.reply('This Command is Only For Servers');
+   const embed = new Discord.RichEmbed()
+.setColor("RANDOM")
+.setThumbnail(client.user.avatarURL)
+.setAuthor(message.author.username, message.author.avatarURL)
+.setTitle('Click Here To Invite bot')
+.setURL(`https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=2146958588585`)
+message.channel.sendEmbed(embed);
+ }
+});
+
+//====================================================================
+//command = EpicCodes
+client.on('message' , message => {
+  if (message.content === prefix + "support") {
+      if(!message.channel.guild) return message.reply('This Command is Only For Servers');
+   const embed = new Discord.RichEmbed()
+.setColor("RANDOM")
+.setThumbnail(client.user.avatarURL)
+.setAuthor(message.author.username, message.author.avatarURL)
+.setTitle('Click Here To Join Server')
+.setURL(`https://discord.gg/WKjuPE`)
+message.channel.sendEmbed(embed);
  }
 });
 
