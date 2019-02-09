@@ -44,9 +44,9 @@ client.on('message',async message => {
   if (message.content === prefix + "help") {
   message.channel.send(" تــــم ارســالك في الخــاص" )      
        const EpicEmbed = new Discord.RichEmbed() 
-         .setColor("#05ff00")
+         .setColor(random)
          .setThumbnail(message.author.avatarURL)
-         .setDescription("***═════════ஜ۩  أوامر الاعضاء  ۩ஜ═══════════***")
+         .setDescription("***═════════ஜ۩  أوامر الاعضاء و الاداره  ۩ஜ═══════════***")
          .addField("**『``#support`` : **","**لإخذ رابط السببورت』**")
          .addField("**『``#hid`` : **","**لاخفاء الرومات』**")
          .addField("**『``#un-hid`` : **","**لاظهار الرومات』**")
@@ -61,13 +61,11 @@ client.on('message',async message => {
          .addField("**『``#cl-room`` : **","**لتسكير الروم』**")
          .addField("**『``#op-room`` : **","**لفتح الروم』**")
          .addField("**『``#server`` : **","**لاظهار معلومات السيرفر』**")
-         .addField("**『``#server`` : **","**لاظهار معلومات السيرفر』**")
          .addField("**『``#id`` : **","**لاظهار معلوماتك』**")
          .addField("**『``#bot`` : **","**لظهار معلومات البوت』**")
-         .addField("**『``#server`` : **","**لاظهار معلومات السيرفر』**")
-         .setDescription("***═════════ஜ۩  أوامر الاعضاء  ۩ஜ═══════════***")
-         .addField("Owner :",owner)
-         .addField("Coded By :",Coded)
+         .setDescription("***═════════ஜ۩  أوامر الاعضاء و الاداره  ۩ஜ═══════════***")
+         .addField("Owner : ",owner)
+         .addField("Coded By : ",Coded)
    message.author.sendEmbed(EpicEmbed)
  }
 });
